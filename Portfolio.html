@@ -3,42 +3,24 @@
     <head>
         <title>Portfolio</title>
         <link rel="stylesheet" type="text/css" href="Portfolio.css">
-        <script src="jquery-3.7.1.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="fullpage.css" />
-        <script type="text/javascript" src="fullpage.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
     </head>
     <body>
-        <!-- Under construction -->
-         <script>
-            new fullpage('#fullpage', {
-                //options here
-                autoScrolling:true,
-                scrollHorizontally: true
-            });
-            (document).ready(function() {
-            $('#fullpage').fullpage({
-                //options here
-                autoScrolling:true,
-                scrollHorizontally: true
-            });
-
-            // Example of how to use fullpage.js methods
-            $.fn.fullpage.setAllowScrolling(false);
-        });
-         </script>
         <div id="fullpage">
-            <section class="section active">
+            <div class="section section1">
                 <h1>First page</h1>
-            </section>
-            <section class="section">
+            </div>
+            <div class="section section2">
                 <h1>Second page</h1>
-            </section>
-            <section class="section">
+            </div>
+            <div class="section section3">
                 <h1>Third page</h1>
-            </section>
-            <section class="section">
+            </div>
+            <div class="section section4">
                 <h1>Fourth page</h1>
-            </section>
+            </div>
         </div>
         <script src="Portfolio.js"></script>
     </body>
