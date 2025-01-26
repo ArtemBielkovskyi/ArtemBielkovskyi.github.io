@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@275&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:wght@275&display=swap');
 
-*{
+* {
     font-family: "Poppins", serif;
-  font-weight: 350;
-  font-style: normal;
+    font-weight: 350;
+    font-style: normal;
 }
 
 h1 {
@@ -36,47 +36,63 @@ h1 {
     color: white;
 }
 
-.TextOnSlides {
+.header {
+    position: absolute;
+    top: 20px; /* Adjusted to make it visible */
+    left:39%;
+    transform: translateX(-50%);
+    display: flex;
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateY(-100%);
+}
+
+.link {
+    margin-right: 50px;
+    opacity: 0;
+}
+
+.link.animate {
+    animation: flyOut 1s forwards;
+}
+
+.link:nth-child(1).animate {
+    animation-delay: 0.2s;
+}
+
+.link:nth-child(2).animate {
+    animation-delay: 0.4s;
+}
+
+.link:nth-child(3).animate {
+    animation-delay: 0.6s;
+}
+
+.link:nth-child(4).animate {
+    animation-delay: 0.8s;
+}
+
+@keyframes flyOut {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.TextOnSlides{
     opacity: 0;
     transition: all 1s;
     filter: blur(5px);
     transform: translateX(-100%);
 }
 
-.show{
+.show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-.header{
-    position: absolute;
-    top:30px;
-    margin-left:33.5%;
-}
-
-
-.link{
-    position:relative;
-    margin-right: 50px;
-    opacity: 0;
-    transition: all 1s;
-    filter: blur(5px);
-    transform: translateY(-100px);
-}
-
-.show2{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0px);
-    padding: 10px 10px;
-}
-
-.show2:hover{
-    border-bottom:1px solid grey;
-    cursor: pointer;
 }
