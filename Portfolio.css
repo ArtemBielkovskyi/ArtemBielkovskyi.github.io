@@ -67,14 +67,13 @@ h1 {
 
 .header {
     position: absolute;
-    top: 20px; /* Adjusted to make it visible */
+    top: 20px;
     left:39%;
-    transform: translateX(-50%);
     display: flex;
     opacity: 0;
     transition: all 1s;
     filter: blur(5px);
-    transform: translateY(-100%);
+    
 }
 
 .link {
@@ -106,7 +105,7 @@ h1 {
     to {
         opacity: 1;
         filter: blur(0);
-        transform: translateY(0);
+        /* transform: translateY(0); */
     }
 }
 
