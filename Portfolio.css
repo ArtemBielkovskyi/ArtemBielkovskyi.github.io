@@ -56,8 +56,7 @@ h1 {
 }
 
 .section3 {
-    background-color: black;
-    color: white;
+    background-color: #f1f1f1;
 }
 
 .section4 {
@@ -161,11 +160,20 @@ h1 {
     filter: blur(5px);
     transition: all 1s;
     max-width:50%;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
 }
 
 .showImg{
     opacity: 1;
     filter: blur(0);
-    transform: translateY(0%);
+    transform: translateX(0%);
 }
+
+/* .Video{
+    height: 60vh;
+    /* margin-left: 13.5%;
+    display: flex;
+    float: left;
+    border-radius: 20px;
+    margin-top: 100px; 
+} */

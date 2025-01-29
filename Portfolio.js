@@ -15,6 +15,11 @@ new fullpage('#fullpage', {
                 link.blur(); // Reset focus state
             });
         }
+        // Remove the animation class when leaving the about section
+        if (origin.index === 1) {
+            document.querySelector('.AboutMeInfo').classList.remove('show2');
+            document.querySelector('.AboutMeImage').classList.remove('showImg');
+        }
     },
     afterLoad: function(origin, destination, direction){
         // Add the animation class when the section is loaded
@@ -25,6 +30,11 @@ new fullpage('#fullpage', {
             document.querySelector('.header').style.opacity = '1';
             document.querySelector('.header').style.filter = 'blur(0)';
             document.querySelector('.header').style.transform = 'translateY(0)';
+        }
+        // Trigger AboutMeInfo and AboutMeImage animation when the about section is loaded
+        if (destination.index === 1) {
+            document.querySelector('.AboutMeInfo').classList.add('show2');
+            document.querySelector('.AboutMeImage').classList.add('showImg');
         }
     }
 });

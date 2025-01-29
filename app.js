@@ -43,3 +43,4 @@ const sections3 = document.querySelectorAll('.AboutMeImage');
 sections3.forEach((el) => {
 observer3.observe(el);
 });
+
