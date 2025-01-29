@@ -44,3 +44,18 @@ sections3.forEach((el) => {
 observer3.observe(el);
 });
 
+const observer4 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+    entry.target.classList.add('showVideo');
+  } else {
+    entry.target.classList.remove('showVideo');
+  }
+});
+});
+
+const sections4 = document.querySelectorAll('.Video');
+sections4.forEach((el) => {
+observer4.observe(el);
+});
+
