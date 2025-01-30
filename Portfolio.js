@@ -1,11 +1,11 @@
 new fullpage('#fullpage', {
     autoScrolling: true,
     fitToSection: true,
-    scrollingSpeed: 1200,
+    scrollingSpeed: 1500,
     scrollHorizontally: false,
     scrollOverflow: true,
     licenseKey: 'YOUR_KEY_HERE',
-    anchors: ['home', 'about', 'experience', 'contact'],
+    anchors: ['home', 'about', 'Lifestyle', 'Education'],
     menu: '.header',
     onLeave: function(origin, destination, direction){
         // Remove the animation class and reset underline when leaving the section

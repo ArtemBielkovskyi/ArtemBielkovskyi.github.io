@@ -190,3 +190,35 @@ h1 {
     filter: blur(0);
     transform: translateY(0);
 }
+
+.EducationTxt{
+    position: absolute;
+    top:170px;
+    left:45%;
+    font-size: 1.7em;
+}
+
+.EducationPoints{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.ExperienceTxt{
+    position: absolute;
+    top:350px;
+    left:45%;
+    font-size: 1.7em;
+}
+
+.BathCollege{
+    margin-bottom:130px;
+}
+
+.ExperiencePoints{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
