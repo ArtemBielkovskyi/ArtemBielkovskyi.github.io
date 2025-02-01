@@ -59,3 +59,17 @@ sections4.forEach((el) => {
 observer4.observe(el);
 });
 
+const observer5 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+    entry.target.classList.add('bluredTxtShow');
+  } else {
+    entry.target.classList.remove('bluredTxtShow');
+  }
+});
+});
+
+const sections5 = document.querySelectorAll('.bluredTxt');
+sections5.forEach((el) => {
+observer5.observe(el);
+});
