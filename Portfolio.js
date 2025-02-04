@@ -5,7 +5,7 @@ new fullpage('#fullpage', {
     scrollHorizontally: false,
     scrollOverflow: true,
     licenseKey: 'YOUR_KEY_HERE',
-    anchors: ['home', 'about', 'Lifestyle', 'Education'],
+    anchors: ['home', 'about', 'Lifestyle', 'Expirience','Contact'],
     menu: '.header',
     onLeave: function(origin, destination, direction){
         // Remove the animation class and reset underline when leaving the section
