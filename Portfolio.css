@@ -60,11 +60,15 @@ h1 {
 }
 
 .section4 {
-    background-color: #ff6347;
-    color: white;
+    background-color: #f1f1f1;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Hide scrollbar */
+}
+
+.section4::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
 }
 
 .header {
@@ -198,12 +202,6 @@ h1 {
     margin-bottom:100px;
 }
 
-.ExperiencePoints{
-    /* display: flex;
-    justify-content: center;
-    align-self: center;
-    align-items: center; */
-}
 /*want to add delay for each point to appear*/
 .bluredTxt{
     opacity: 0;
@@ -214,4 +212,22 @@ h1 {
 .bluredTxtShow{
     opacity: 1;
     filter: blur(0);
+}
+
+
+.description{
+    margin-left:7px;
+}
+
+.ChefTxt{
+    margin-top:25px;
+}
+
+.BathCollege{
+    margin-top: 25px;
+}
+
+.heading{
+    font-size: 1.2em;
+    font-weight: 300;
 }
