@@ -106,15 +106,19 @@ h1 {
     transition: all 1s;
     filter: blur(5px);
     top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .link {
     width: 100px;
     opacity: 0;
-    margin:auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(1000%);
+    float: left;
 }
 
 .link.animate {
@@ -141,7 +145,7 @@ h1 {
     to {
         opacity: 1;
         filter: blur(0);
-        /* transform: translateY(0); */
+        transform: translateY(0);
     }
 }
 
