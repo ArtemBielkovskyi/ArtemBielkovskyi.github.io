@@ -73,3 +73,34 @@ const sections5 = document.querySelectorAll('.bluredTxt');
 sections5.forEach((el) => {
 observer5.observe(el);
 });
+
+
+const observer6 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+    entry.target.classList.add('emailShow');
+  } else {
+    entry.target.classList.remove('emailShow');
+  }
+});
+});
+
+const sections6 = document.querySelectorAll('.email');
+sections6.forEach((el) => {
+observer6.observe(el);
+});
+
+const observer7 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+    entry.target.classList.add('socialShow');
+  } else {
+    entry.target.classList.remove('socialShow');
+  }
+});
+});
+
+const sections7 = document.querySelectorAll('.socialLink');
+sections7.forEach((el) => {
+observer7.observe(el);
+});

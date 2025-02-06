@@ -36,5 +36,10 @@ new fullpage('#fullpage', {
             document.querySelector('.AboutMeInfo').classList.add('show2');
             document.querySelector('.AboutMeImage').classList.add('showImg');
         }
+        if (destination.index === 4) {
+            document.querySelectorAll('.socialLink').forEach(link => {
+                link.classList.add('socialShow');
+            });
+        }
     }
 });
