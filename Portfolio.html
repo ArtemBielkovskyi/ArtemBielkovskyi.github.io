@@ -31,15 +31,36 @@
             </div>
             <div class="section section3" data-anchor="Lifestyle">
                 <h2 class="TextOnSlides">Lifestyle</h2>
-                <video class="Video" autoplay loop muted>
+                <video class="Video" autoplay loop muted onmouseover="
+                document.querySelector('.UnderVidText1').style.opacity = '1';
+                document.querySelector('.UnderVidText1').style.transition = 'all 1.5s';
+                " onmouseleave="
+                document.querySelector('.UnderVidText1').style.opacity = '0';
+                document.querySelector('.UnderVidText1').style.transition = 'all 0.1s';
+                ">
                     <source src="img/IMG_4910.MP4" type="video/mp4" class="Video">
                 </video>
-                <video class="Video" autoplay loop muted>
+                <h1 class="UnderVidText UnderVidText1">Studying is most important part of our lives</h1>
+                <video class="Video" autoplay loop muted onmouseover="
+                document.querySelector('.UnderVidText2').style.opacity = '1';
+                document.querySelector('.UnderVidText2').style.transition = 'all 1.5s';
+                " onmouseleave="
+                document.querySelector('.UnderVidText2').style.opacity = '0';
+                document.querySelector('.UnderVidText2').style.transition = 'all 0.1s';
+                ">
                     <source src="img/IMG_4911.MP4" type="video/mp4" class="Video">
                 </video>
-                <video class="Video" autoplay loop muted>
+                <h1 class="UnderVidText UnderVidText2">Never stop learing new skills, especially when you think you have time</h1>
+                <video class="Video" autoplay loop muted onmouseover="
+                document.querySelector('.UnderVidText3').style.opacity = '1';
+                document.querySelector('.UnderVidText3').style.transition = 'all 1.5s';
+                " onmouseleave="
+                document.querySelector('.UnderVidText3').style.opacity = '0';
+                document.querySelector('.UnderVidText3').style.transition = 'all 0.1s';
+                ">
                     <source src="img/IMG_4912.MP4" type="video/mp4" class="Video">
                 </video>
+                <h1 class="UnderVidText UnderVidText3">Your health is extremely important for your mental health and general well-being </h1>
             </div>
             <div class="section section4" data-anchor="Expirience">
                 <h2 class="TextOnSlides EducationTxt" id="Text">Education</h2>

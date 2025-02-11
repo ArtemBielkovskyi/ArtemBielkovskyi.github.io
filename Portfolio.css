@@ -230,6 +230,7 @@ h1 {
     transform: translateY(100%);
     transition: all 1s;
     margin-bottom:25px;
+    cursor: pointer;
 }
 
 .showVideo{
@@ -237,6 +238,32 @@ h1 {
     filter: blur(0);
     transform: translateY(0);
     filter: drop-shadow(5px 5px 10px #222); 
+}
+
+.Video:hover{
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.UnderVidText{
+    position: absolute;
+    width:200px;
+    font-size: 1.2em;
+    text-align: center;
+    user-select: none;
+    pointer-events: none;
+    top: 480px;
+    opacity: 0;
+}
+
+.UnderVidText1{
+    left:16%;
+}
+.UnderVidText2{
+    left:45%;
+}
+.UnderVidText3{
+    left:75%;
 }
 
 .BathCollege{
