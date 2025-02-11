@@ -1,7 +1,7 @@
 new fullpage('#fullpage', {
     autoScrolling: true,
     fitToSection: true,
-    scrollingSpeed: 1500,
+    scrollingSpeed: 1600,
     scrollHorizontally: false,
     scrollOverflow: true,
     licenseKey: 'YOUR_KEY_HERE',
@@ -16,9 +16,12 @@ new fullpage('#fullpage', {
             });
         }
         // Remove the animation class when leaving the about section
-        if (origin.index === 1) {
+        if (origin.index === 1 || origin.index === 3) {
             document.querySelector('.AboutMeInfo').classList.remove('show2');
             document.querySelector('.AboutMeImage').classList.remove('showImg');
+        }
+        if (destination.index === 2 || destination.index === 4) {
+            document.querySelector('.EducationImg').classList.remove('EducationImgShow');
         }
     },
     afterLoad: function(origin, destination, direction){
@@ -35,6 +38,9 @@ new fullpage('#fullpage', {
         if (destination.index === 1) {
             document.querySelector('.AboutMeInfo').classList.add('show2');
             document.querySelector('.AboutMeImage').classList.add('showImg');
+        }
+        if (destination.index === 3) {
+            document.querySelector('.EducationImg').classList.add('EducationImgShow');
         }
         if (destination.index === 4) {
             document.querySelectorAll('.socialLink').forEach(link => {

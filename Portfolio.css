@@ -159,10 +159,15 @@ h1 {
     align-items: center;
 }
 
+.Name{
+    font-size: 2.4em;
+    letter-spacing: 15px;
+}
+
 .AboutMe{
     position: absolute;
     top:150px;
-    left:65%;
+    left:67%;
     transform: translateX(100%);
 }
 
@@ -170,6 +175,7 @@ h1 {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+    filter:drop-shadow(1px 1px 7px black);
 }
 
 
@@ -191,6 +197,7 @@ h1 {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
+    filter:drop-shadow(3px 3px 7px black);
 }
 
 .AboutMeImage{
@@ -208,6 +215,7 @@ h1 {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0%);
+    filter: drop-shadow(5px 5px 50px #222); 
 }
 
 .Video {
@@ -221,12 +229,14 @@ h1 {
     filter: blur(5px);
     transform: translateY(100%);
     transition: all 1s;
+    margin-bottom:25px;
 }
 
 .showVideo{
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
+    filter: drop-shadow(5px 5px 10px #222); 
 }
 
 .BathCollege{
@@ -243,6 +253,7 @@ h1 {
 .bluredTxtShow{
     opacity: 1;
     filter: blur(0);
+
 }
 
 
@@ -312,3 +323,21 @@ h1 {
     filter: blur(0);
 }
 
+.EducationImg{
+    position: absolute;
+    top:0;
+    height:110vh;
+    right: 0;
+    max-width:40%;
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transform: translateX(100%);
+}
+
+.EducationImgShow{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+    filter: drop-shadow(5px 5px 50px #222); 
+}

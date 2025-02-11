@@ -29,20 +29,7 @@ observer2.observe(el);
 });
 
 
-const observer3 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('showImg');
-  } else {
-    entry.target.classList.remove('showImg');
-  }
-});
-});
 
-const sections3 = document.querySelectorAll('.AboutMeImage');
-sections3.forEach((el) => {
-observer3.observe(el);
-});
 
 const observer4 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -104,3 +91,4 @@ const sections7 = document.querySelectorAll('.socialLink');
 sections7.forEach((el) => {
 observer7.observe(el);
 });
+
