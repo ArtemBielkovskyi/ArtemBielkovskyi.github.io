@@ -369,4 +369,44 @@ h1 {
     filter: drop-shadow(5px 5px 50px #222); 
 }
 
-/*media section under construction*/
+@media (max-width:480px){
+    .AboutMeImage{
+        opacity: 0;
+    }
+
+    .EducationImg{
+        opacity: 0;
+    }
+
+    .AboutMeInfo{
+        margin-left:5%;
+        width:90%;
+    }
+
+    .AboutMe{
+        position: absolute;
+        top:150px;
+        left: 35%;
+    }
+
+    .Name{
+        font-size: 1.5em;
+        letter-spacing: 5px;
+    }
+    .Video:hover{
+        opacity: 1;
+        transition: all 0.3s;
+    }
+    .UnderVidText{
+        display: none;
+    }
+
+    .showVideo{
+        opacity:0;
+    }
+    .Video{
+        opacity:1;
+        transform: translateY(0);
+        
+    }
+}
