@@ -369,11 +369,114 @@ h1 {
     filter: drop-shadow(5px 5px 50px #222); 
 }
 
+@media (max-width:480px), (min-height:901px){
+    .AboutMeImage{
+        opacity: 0;
+    }
 
-#3DModel canvas{
-    width: 30vh !important;
-    height: 100vh !important;
-    position: absolute;
-    top: 0;
-    left: 0;
+    .EducationImg{
+        opacity: 0;
+    }
+
+    .AboutMeInfo{
+        margin-left:5%;
+        width:90%;
+    }
+
+    .AboutMe{
+        position: absolute;
+        top:150px;
+        left: 39%;
+    }
+
+    .Name{
+        font-size: 1.5em;
+        letter-spacing: 5px;
+    }
+    .Video:hover{
+        opacity: 1;
+        transition: all 0.3s;
+    }
+    .UnderVidText{
+        display: none;
+    }
+
+    .showVideo{
+        opacity:0;
+    }
+    .Video{
+        opacity:1;
+        transform: translateY(0);
+        
+    }
+    
+}
+
+@media (max-height:900px), (min-width:480px){ 
+    .TextOnSlides{
+        opacity: 1;
+        transition: all 1s;
+        filter: blur(0px);
+        transform: translateX(0%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Name{
+        font-size: 1.5em;
+        letter-spacing: 5px;
+    }
+
+    .AboutMeInfo{
+        margin-left:25%;
+        width:50%;
+        margin-top:100px;
+    }
+
+    .AboutMe{
+        position: absolute;
+        top:30%;
+        left: 44%;
+    }
+
+    .Video:hover{
+        opacity: 1;
+        transition: all 0.3s;
+    }
+    .UnderVidText{
+        display: none;
+    }
+
+    .showVideo{
+        opacity:0;
+    }
+    .Video{
+        opacity:1;
+        transform: translateY(0);
+        
+    }
+    .AboutMeImage{
+        opacity: 0;
+    }
+
+    .EducationImg{
+        opacity: 0;
+    }
+
+    .bluredTxt{
+        font-size: 1em;
+        margin-top:0px;
+        margin-bottom: 0px;
+    }
+
+    .ExperienceTxt{
+        margin-bottom: 20px;
+    }
+    .EducationTxt{
+        margin-bottom: 20px;
+    }
+
+    .Video{
+        margin-top:50px;
+    }
 }
