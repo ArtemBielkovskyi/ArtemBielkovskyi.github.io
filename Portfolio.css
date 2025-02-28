@@ -598,6 +598,28 @@ h1 {
 }
 
 @media only screen and (min-width:800px) and (max-width:1279px){ 
+    .ContactSection{
+        width:35%;
+        height:80%;
+        display: inline-block;
+    }
+    
+    .CVimg{
+        height:40%;
+        left:60%;
+        top:45%;
+        position:relative;
+        float: left;
+    }
+    
+    .ContactBlock{
+        padding-left:15%;
+    }
+
+    .email{
+        margin-bottom: -50px;
+    }
+
     .TextOnSlides{
         opacity: 1;
         transition: all 1s;
