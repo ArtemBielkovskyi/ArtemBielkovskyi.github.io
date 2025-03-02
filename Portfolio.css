@@ -504,23 +504,20 @@ h1 {
 
 @media only screen and (min-width:360px) and (max-width:799px){ 
     .hamburger {
-        /* position: absolute; Change from sticky to absolute */
-        /* margin-left:auto; */
-        position: absolute;
+        position: absolute; /* Ensure it is positioned absolutely */
         display: block;
         top: 50px;
-        z-index: 200;
+        left: 20px; /* Adjust as needed */
+        z-index: 200; /* Ensure it has a higher z-index than .headerSlider */
     }
 
-    .headerSlider{
-        /* position: absolute; */
-        /* position: absolute; */
-        width: 100vh;
+    .headerSlider {
+        position: relative; /* Ensure it is positioned relative */
+        width: 100%;
         height: 200vh;
-        z-index: 100;
-        margin-top:-20px;
+        margin-top: -20px;
         background-color: grey;
-        display: none;
+        z-index: 100; /* Ensure it has a lower z-index than .hamburger */
     }
 
     .link{
