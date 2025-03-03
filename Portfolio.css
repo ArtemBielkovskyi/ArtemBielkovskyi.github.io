@@ -503,21 +503,32 @@ h1 {
 }
 
 @media only screen and (min-width:360px) and (max-width:799px){ 
-    .hamburger {
-        position: absolute; /* Ensure it is positioned absolutely */
-        display: block;
-        top: 50px;
-        left: 20px; /* Adjust as needed */
-        z-index: 200; /* Ensure it has a higher z-index than .headerSlider */
+    .hamburger{
+        display: flex;
+        z-index: 100;
+        justify-content: center;
+        align-items: center;
     }
 
-    .headerSlider {
-        position: relative; /* Ensure it is positioned relative */
-        width: 100%;
-        height: 200vh;
-        margin-top: -20px;
-        background-color: grey;
-        z-index: 100; /* Ensure it has a lower z-index than .hamburger */
+    .hamburgerImg{
+        width:50px;
+        position: absolute;
+        z-index: 100;
+        top:50px;
+        cursor:pointer;
+
+    }
+
+    #headerSlider{
+        width:100%;
+        height: 100vh;
+        top:0;
+        background-color: rgb(231, 230, 230);
+        position: absolute;
+        z-index: 50;
+        display: none;
+        overflow: hidden;
+
     }
 
     .link{
