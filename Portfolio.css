@@ -508,16 +508,44 @@ h1 {
         z-index: 100;
         justify-content: center;
         align-items: center;
+        /* width: 50px;
+        height: 30px; */
+        /* position: absolute; */
         /* transition: all 1s; */
     }
 
-    .hamburgerImg{
+    /* .hamburgerImg{
         width:50px;
         position: absolute;
         z-index: 200;
         top:50px;
         cursor:pointer;
         
+    } */
+
+    .hamburgerWrapper{
+        width:100%;
+        height:20%;
+        position: absolute;
+        z-index: 200;
+    }
+
+    .line{
+        width: 50px;
+        height: 3px;
+        background-color: black;
+        display: block;
+        z-index: 100;
+        position: absolute;
+    
+    }
+
+    .line1{
+        margin-top: 95px;
+    }
+
+    .line2{
+        margin-top: 115px;
     }
 
     #headerSlider{

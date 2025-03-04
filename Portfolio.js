@@ -16,6 +16,7 @@ new fullpage('#fullpage', {
             });
             if(document.querySelector(".Unactive")) {
                 document.querySelector('.hamburger').classList.remove('hamburgerstyle');
+                document.querySelector('.hamburgerWrapper').style.height = '0';
             }
             // document.querySelector('.hamburger').remove();
         }
@@ -39,6 +40,9 @@ new fullpage('#fullpage', {
             document.querySelector('.header').style.transform = 'translateY(0)';
             document.querySelector('.hamburger').classList.add('hamburgerstyle');
             document.getElementById('headerSlider').classList.add('Unactive');
+            if(screen.width < 768) {
+                document.querySelector('.hamburgerWrapper').style.height = '20%';
+            }
         }
         // Trigger AboutMeInfo and AboutMeImage animation when the about section is loaded
         if (destination.index === 1) {
@@ -60,9 +64,21 @@ function toggleHeaderSlider() {
     var x = document.getElementById("headerSlider");
     if (x.style.display === "block") {
         x.style.display = "none";
+        document.querySelector(".line1").style.rotate="0deg";
+        document.querySelector(".line1").style.transition="all 0.5s";
+        document.querySelector(".line1").style.marginTop="105px";
+        document.querySelector(".line2").style.rotate="0deg";
+        document.querySelector(".line2").style.transition="all 0.5s";
+        document.querySelector(".line2").style.marginTop="105px";
         location.reload();
     } else {
         x.style.display = "block";
+        document.querySelector(".line1").style.rotate="-45deg";
+        document.querySelector(".line1").style.transition="all 0.5s";
+        document.querySelector(".line1").style.marginTop="105px";
+        document.querySelector(".line2").style.rotate="45deg";
+        document.querySelector(".line2").style.transition="all 0.5s";
+        document.querySelector(".line2").style.marginTop="105px";
         document.getElementById('headerSlider').classList.remove('Unactive');
         // x.style.position = "sticky";
         // document.body.style.maxWidth = "100%";
