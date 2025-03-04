@@ -14,7 +14,7 @@ new fullpage('#fullpage', {
                 link.classList.remove('animate');
                 link.blur(); // Reset focus state
             });
-            if(document.getElementsByClassName("Unactive")) {
+            if(document.querySelector(".Unactive")) {
                 document.querySelector('.hamburger').classList.remove('hamburgerstyle');
             }
             // document.querySelector('.hamburger').remove();
@@ -38,7 +38,7 @@ new fullpage('#fullpage', {
             document.querySelector('.header').style.filter = 'blur(0)';
             document.querySelector('.header').style.transform = 'translateY(0)';
             document.querySelector('.hamburger').classList.add('hamburgerstyle');
-            document.querySelector('.headerSlider').classList.add('Unactive');
+            document.getElementById('headerSlider').classList.add('Unactive');
         }
         // Trigger AboutMeInfo and AboutMeImage animation when the about section is loaded
         if (destination.index === 1) {
@@ -63,6 +63,7 @@ function toggleHeaderSlider() {
         location.reload();
     } else {
         x.style.display = "block";
+        document.getElementById('headerSlider').classList.remove('Unactive');
         // x.style.position = "sticky";
         // document.body.style.maxWidth = "100%";
         // document.body.style.overflow = "hidden";
