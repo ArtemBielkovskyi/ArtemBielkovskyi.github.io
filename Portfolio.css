@@ -503,31 +503,32 @@ h1 {
 }
 
 @media only screen and (min-width:360px) and (max-width:799px){ 
-    .hamburger{
+    .hamburgerstyle{
         display: flex;
         z-index: 100;
         justify-content: center;
         align-items: center;
+        /* transition: all 1s; */
     }
 
     .hamburgerImg{
         width:50px;
         position: absolute;
-        z-index: 100;
+        z-index: 200;
         top:50px;
         cursor:pointer;
-
+        
     }
 
     #headerSlider{
-        width:100%;
-        height: 100vh;
+        height: 200vh;
+        width: 100%;
         top:0;
         background-color: rgb(231, 230, 230);
         position: absolute;
-        z-index: 50;
+        z-index: 1;
         display: none;
-        overflow: hidden;
+        /* scroll-snap-stop: always; */
 
     }
 

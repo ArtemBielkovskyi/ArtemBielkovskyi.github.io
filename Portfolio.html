@@ -9,22 +9,24 @@
         <script type="text/javascript" src="js/fullpage.min.js"></script>
         <script defer src="app.js"></script>
         <script>
-            function toggleHeaderSlider() {
-            var x = document.getElementById("headerSlider");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
+        //     function toggleHeaderSlider() {
+        //     var x = document.getElementById("headerSlider");
+        //     if (x.style.display === "block") {
+        //         x.style.display = "none";
+        //     } else {
+        //         x.style.display = "block";
+        //         x.style.position = "sticky";
+        //     }
+        // }
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+        <a class="hamburger" onclick="toggleHeaderSlider()"><img src="img/hamburger.png" class="hamburgerImg"></a>
+
+        <div id="headerSlider"></div>
         <div id="fullpage">
             <div class="section section1" data-anchor="home">
-                <a class="hamburger" onclick="toggleHeaderSlider()"><img src="img/hamburger.png" class="hamburgerImg"></a>
-                <div id="headerSlider"></div>
                 <div class="header">
                     <a class="About link" href="#about">About me</a>
                     <a class="Lifestyle link" href="#Lifestyle">Lifestyle</a>
