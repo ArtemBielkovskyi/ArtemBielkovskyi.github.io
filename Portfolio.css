@@ -441,9 +441,10 @@ h1 {
 
 @media only screen and (min-width:1280px){
     .ContactSection{
-        width:49%;
+        width:30%;
         height:100%;
         display: inline-block;
+        margin-bottom: -10px;
     }
 
     /* .hamburgerWrapper{
@@ -451,9 +452,9 @@ h1 {
     } */
     
     .CVimg{
-        height:20%;
+        height:50%;
         left:60%;
-        top:40%;
+        top:27%;
         position:absolute;
     }
     
@@ -694,20 +695,23 @@ h1 {
 @media only screen and (min-width:800px) and (max-width:1279px){ 
     .ContactSection{
         width:35%;
-        height:80%;
+        height:40%;
         display: inline-block;
+        margin-top: 0%;
     }
     
     .CVimg{
-        height:40%;
-        left:60%;
-        top:45%;
-        position:relative;
+        height:50%;
+        position: absolute;
         float: left;
+        top: 25%;
+        left: 55%;
+        /* z-index: 100; */
     }
     
     .ContactBlock{
         padding-left:15%;
+        /* margin-top: -40%; */
     }
 
     .email{
