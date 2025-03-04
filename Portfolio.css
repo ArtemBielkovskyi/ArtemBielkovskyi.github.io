@@ -441,6 +441,10 @@ h1 {
         height:100%;
         display: inline-block;
     }
+
+    /* .hamburgerWrapper{
+        height: 0%;
+    } */
     
     .CVimg{
         height:20%;
@@ -508,20 +512,7 @@ h1 {
         z-index: 100;
         justify-content: center;
         align-items: center;
-        /* width: 50px;
-        height: 30px; */
-        /* position: absolute; */
-        /* transition: all 1s; */
     }
-
-    /* .hamburgerImg{
-        width:50px;
-        position: absolute;
-        z-index: 200;
-        top:50px;
-        cursor:pointer;
-        
-    } */
 
     .hamburgerWrapper{
         width:100%;
@@ -555,10 +546,23 @@ h1 {
         background-color: rgb(237, 237, 237);
         position: absolute;
         z-index: 1;
-        display: none;
-        /* scroll-snap-stop: always; */
+        transition: all 1s;
+        /* display: none; */
+        transform: translateX(100%);
 
+        /* scroll-snap-stop: always; */
     }
+/* 
+    .Unactive{
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+    .Active{
+        transition: all 1s;
+
+        transform: translateX(0%);
+    } */
 
     .link{
         display: none;

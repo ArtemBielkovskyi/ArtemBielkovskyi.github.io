@@ -40,8 +40,11 @@ new fullpage('#fullpage', {
             document.querySelector('.header').style.transform = 'translateY(0)';
             document.querySelector('.hamburger').classList.add('hamburgerstyle');
             document.getElementById('headerSlider').classList.add('Unactive');
-            if(screen.width < 768) {
+            if(window.innerWidth < 768) {
                 document.querySelector('.hamburgerWrapper').style.height = '20%';
+            }
+            if(window.innerWidth >= 768) {
+                document.querySelector('.hamburgerWrapper').style.height = '0%';
             }
         }
         // Trigger AboutMeInfo and AboutMeImage animation when the about section is loaded
@@ -62,17 +65,20 @@ new fullpage('#fullpage', {
 
 function toggleHeaderSlider() {
     var x = document.getElementById("headerSlider");
-    if (x.style.display === "block") {
-        x.style.display = "none";
+    if (x.style.transform === "translateX(0%)") {
+        x.style.transform = "translateX(100%)"
         document.querySelector(".line1").style.rotate="0deg";
         document.querySelector(".line1").style.transition="all 0.5s";
         document.querySelector(".line1").style.marginTop="105px";
         document.querySelector(".line2").style.rotate="0deg";
         document.querySelector(".line2").style.transition="all 0.5s";
         document.querySelector(".line2").style.marginTop="105px";
-        location.reload();
+        // document.getElementById('headerSlider').classList.remove('Active');
+        setTimeout(function(){
+            location.reload();
+        },750);
     } else {
-        x.style.display = "block";
+        // x.style.display = "block";
         document.querySelector(".line1").style.rotate="-45deg";
         document.querySelector(".line1").style.transition="all 0.5s";
         document.querySelector(".line1").style.marginTop="105px";
@@ -80,6 +86,8 @@ function toggleHeaderSlider() {
         document.querySelector(".line2").style.transition="all 0.5s";
         document.querySelector(".line2").style.marginTop="105px";
         document.getElementById('headerSlider').classList.remove('Unactive');
+        x.style.transform = "translateX(0%)";
+
         // x.style.position = "sticky";
         // document.body.style.maxWidth = "100%";
         // document.body.style.overflow = "hidden";
