@@ -41,7 +41,7 @@ new fullpage('#fullpage', {
             document.querySelector('.hamburger').classList.add('hamburgerstyle');
             document.getElementById('headerSlider').classList.add('Unactive');
             if(window.innerWidth < 768) {
-                document.querySelector('.hamburgerWrapper').style.height = '20%';
+                document.querySelector('.hamburgerWrapper').style.height = '10%';
             }
             if(window.innerWidth >= 768) {
                 document.querySelector('.hamburgerWrapper').style.height = '0%';
@@ -77,6 +77,37 @@ function toggleHeaderSlider() {
         setTimeout(function(){
             location.reload();
         },750);
+    } else {
+        // x.style.display = "block";
+        document.querySelector(".line1").style.rotate="-45deg";
+        document.querySelector(".line1").style.transition="all 0.5s";
+        document.querySelector(".line1").style.marginTop="105px";
+        document.querySelector(".line2").style.rotate="45deg";
+        document.querySelector(".line2").style.transition="all 0.5s";
+        document.querySelector(".line2").style.marginTop="105px";
+        document.getElementById('headerSlider').classList.remove('Unactive');
+        x.style.transform = "translateX(0%)";
+
+        // x.style.position = "sticky";
+        // document.body.style.maxWidth = "100%";
+        // document.body.style.overflow = "hidden";
+        // document.getElementById("fullpage").scrollingSpeed = 0;   
+    }
+}
+
+function toggleHeaderSlider2() {
+    var x = document.getElementById("headerSlider");
+    if (x.style.transform === "translateX(0%)") {
+        x.style.transform = "translateX(100%)"
+        document.querySelector(".line1").style.rotate="0deg";
+        document.querySelector(".line1").style.transition="all 0.5s";
+        document.querySelector(".line1").style.marginTop="105px";
+        document.querySelector(".line2").style.rotate="0deg";
+        document.querySelector(".line2").style.transition="all 0.5s";
+        document.querySelector(".line2").style.marginTop="105px";
+        setTimeout(function () {
+            location.reload();
+        }, 10)
     } else {
         // x.style.display = "block";
         document.querySelector(".line1").style.rotate="-45deg";

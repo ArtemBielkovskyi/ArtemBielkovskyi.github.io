@@ -8,22 +8,16 @@
         <script src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/fullpage.min.js"></script>
         <script defer src="app.js"></script>
-        <script>
-        //     function toggleHeaderSlider() {
-        //     var x = document.getElementById("headerSlider");
-        //     if (x.style.display === "block") {
-        //         x.style.display = "none";
-        //     } else {
-        //         x.style.display = "block";
-        //         x.style.position = "sticky";
-        //     }
-        // }
-        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="hamburgerWrapper" onclick="toggleHeaderSlider()"><a class="hamburger"><div class="line line1"></div><div class="line line2"></div></a></div>
-        <div id="headerSlider" class="Unactive"></div>
+        <div id="headerSlider" class="Unactive">
+            <a href="#about"><div class="hAboutMe hButton" onclick="toggleHeaderSlider2()">About me</div></a>
+            <a href="#Lifestyle"><div class="hLifestyle hButton" onclick="toggleHeaderSlider2()">Lifestyle</div></a>
+            <a href="#Expirience"><div class="hExperience hButton" onclick="toggleHeaderSlider2()">Experience</div></a>
+            <a href="#Contact"><div class="hContact hButton" onclick="toggleHeaderSlider2()">Contact</div></a>
+        </div>
         <div id="fullpage">
             <div class="section section1" data-anchor="home">
                 <div class="header">
