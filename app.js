@@ -1,94 +1,25 @@
-const observer = new IntersectionObserver((entries) => {
+//function to animate objects and add classes for animation
+function AnimationLinking(selector,newClass){
+  const Aobserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('show');
+      entry.target.classList.add(newClass);
     } else {
-      entry.target.classList.remove('show');
+      entry.target.classList.remove(newClass);
     }
   });
-});
-
-const sections = document.querySelectorAll('.TextOnSlides');
-sections.forEach((el) => {
-  observer.observe(el);
-});
-
-const observer2 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('show2');
-  } else {
-    entry.target.classList.remove('show2');
-  }
-});
-});
-
-const sections2 = document.querySelectorAll('.AboutMeInfo');
-sections2.forEach((el) => {
-observer2.observe(el);
-});
-
-
-
-
-const observer4 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('showVideo');
-  } else {
-    entry.target.classList.remove('showVideo');
-  }
-});
-});
-
-const sections4 = document.querySelectorAll('.Video');
-sections4.forEach((el) => {
-observer4.observe(el);
-});
-
-const observer5 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('bluredTxtShow');
-  } else {
-    entry.target.classList.remove('bluredTxtShow');
-  }
-});
-});
-
-const sections5 = document.querySelectorAll('.bluredTxt');
-sections5.forEach((el) => {
-observer5.observe(el);
-});
-
-
-const observer6 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('emailShow');
-  } else {
-    entry.target.classList.remove('emailShow');
-  }
-});
-});
-
-const sections6 = document.querySelectorAll('.email');
-sections6.forEach((el) => {
-observer6.observe(el);
-});
-
-const observer7 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('socialShow');
-  } else {
-    entry.target.classList.remove('socialShow');
-  }
-});
-});
-
-const sections7 = document.querySelectorAll('.socialLink');
-sections7.forEach((el) => {
-observer7.observe(el);
-});
+  });
+  
+  const Asection = document.querySelectorAll(selector);
+  Asection.forEach((el) => {
+  Aobserver.observe(el);
+  });
+};
+//animations on the page 
+AnimationLinking('.AboutMeInfo','show2');
+AnimationLinking('.TextOnSlides','show');
+AnimationLinking('.Video','showVideo');
+AnimationLinking('.bluredTxt','bluredTxtShow');
+AnimationLinking('.email','emailShow');
+AnimationLinking('.socialLink','socialShow');
 

@@ -1,4 +1,7 @@
+//Main js file with js fullpage plugin and some writen object animations 
+
 new fullpage('#fullpage', {
+    //fullpage settings setted up for the website
     autoScrolling: true,
     fitToSection: true,
     scrollingSpeed: 1600,
@@ -7,6 +10,7 @@ new fullpage('#fullpage', {
     licenseKey: 'YOUR_KEY_HERE',
     anchors: ['home', 'about', 'Lifestyle', 'Expirience','Contact'],
     menu: '.header',
+    //when we leave sections 
     onLeave: function(origin, destination, direction){
         // Remove the animation class and reset underline when leaving the section
         if (origin.index === 0) {
@@ -14,13 +18,12 @@ new fullpage('#fullpage', {
                 link.classList.remove('animate');
                 link.blur(); // Reset focus state
             });
+            //when we lave first section on the phone, hamburger menu dissapears 
             if(document.querySelector(".Unactive")) {
                 document.querySelector('.hamburger').classList.remove('hamburgerstyle');
                 document.querySelector('.hamburgerWrapper').style.height = '0';
             }
-            // document.querySelector('.hamburger').remove();
         }
-        // Remove the animation class when leaving the about section
         if (origin.index === 1 || origin.index === 3) {
             document.querySelector('.AboutMeInfo').classList.remove('show2');
             document.querySelector('.AboutMeImage').classList.remove('showImg');
@@ -29,8 +32,8 @@ new fullpage('#fullpage', {
             document.querySelector('.EducationImg').classList.remove('EducationImgShow');
         }
     },
+    // Add the animation class when the section is loaded
     afterLoad: function(origin, destination, direction){
-        // Add the animation class when the section is loaded
         if (destination.index === 0) {
             document.querySelectorAll('.link').forEach(link => {
                 link.classList.add('animate');
@@ -40,6 +43,7 @@ new fullpage('#fullpage', {
             document.querySelector('.header').style.transform = 'translateY(0)';
             document.querySelector('.hamburger').classList.add('hamburgerstyle');
             document.getElementById('headerSlider').classList.add('Unactive');
+            //setting up size of the hamburger button, if its the phone screen, otherwise there going to be no button
             if(window.innerWidth < 768) {
                 document.querySelector('.hamburgerWrapper').style.height = '10%';
             }
@@ -52,6 +56,7 @@ new fullpage('#fullpage', {
             document.querySelector('.AboutMeInfo').classList.add('show2');
             document.querySelector('.AboutMeImage').classList.add('showImg');
         }
+        //trigger image on education/experience section 
         if (destination.index === 3) {
             document.querySelector('.EducationImg').classList.add('EducationImgShow');
         }
@@ -63,7 +68,8 @@ new fullpage('#fullpage', {
     }
 });
 
-function toggleHeaderSlider() {
+//setting logic for the hamburger button, writing animation when we click on it
+function toggleHeaderSlider(loading) {
     var x = document.getElementById("headerSlider");
     if (x.style.transform === "translateX(0%)") {
         x.style.transform = "translateX(100%)"
@@ -73,12 +79,11 @@ function toggleHeaderSlider() {
         document.querySelector(".line2").style.rotate="0deg";
         document.querySelector(".line2").style.transition="all 0.5s";
         document.querySelector(".line2").style.marginTop="105px";
-        // document.getElementById('headerSlider').classList.remove('Active');
+        //we require to reload page otherwise after closing hamburger menu we can not scroll for soe reason
         setTimeout(function(){
             location.reload();
-        },750);
+        },loading);
     } else {
-        // x.style.display = "block";
         document.querySelector(".line1").style.rotate="-45deg";
         document.querySelector(".line1").style.transition="all 0.5s";
         document.querySelector(".line1").style.marginTop="105px";
@@ -87,41 +92,5 @@ function toggleHeaderSlider() {
         document.querySelector(".line2").style.marginTop="105px";
         document.getElementById('headerSlider').classList.remove('Unactive');
         x.style.transform = "translateX(0%)";
-
-        // x.style.position = "sticky";
-        // document.body.style.maxWidth = "100%";
-        // document.body.style.overflow = "hidden";
-        // document.getElementById("fullpage").scrollingSpeed = 0;   
-    }
-}
-
-function toggleHeaderSlider2() {
-    var x = document.getElementById("headerSlider");
-    if (x.style.transform === "translateX(0%)") {
-        x.style.transform = "translateX(100%)"
-        document.querySelector(".line1").style.rotate="0deg";
-        document.querySelector(".line1").style.transition="all 0.5s";
-        document.querySelector(".line1").style.marginTop="105px";
-        document.querySelector(".line2").style.rotate="0deg";
-        document.querySelector(".line2").style.transition="all 0.5s";
-        document.querySelector(".line2").style.marginTop="105px";
-        setTimeout(function () {
-            location.reload();
-        }, 10)
-    } else {
-        // x.style.display = "block";
-        document.querySelector(".line1").style.rotate="-45deg";
-        document.querySelector(".line1").style.transition="all 0.5s";
-        document.querySelector(".line1").style.marginTop="105px";
-        document.querySelector(".line2").style.rotate="45deg";
-        document.querySelector(".line2").style.transition="all 0.5s";
-        document.querySelector(".line2").style.marginTop="105px";
-        document.getElementById('headerSlider').classList.remove('Unactive');
-        x.style.transform = "translateX(0%)";
-
-        // x.style.position = "sticky";
-        // document.body.style.maxWidth = "100%";
-        // document.body.style.overflow = "hidden";
-        // document.getElementById("fullpage").scrollingSpeed = 0;   
     }
 }

@@ -1,5 +1,7 @@
+/* website fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:wght@275&display=swap');
 
+/* section with basic css required on any type of device */
 * {
     font-family: "Poppins", serif;
     font-weight: 350;
@@ -34,7 +36,7 @@
   }
 
 h1 {
-    text-shadow: 1px 1px 2px black;
+    filter: drop-shadow(1px 1px 7px rgb(129, 129, 129));
 }
 
 
@@ -120,7 +122,7 @@ h1 {
     transform: translateX(1000%);
     float: left;
 }
-
+/* animation delay for navigation menu buttons */
 .link.animate {
     animation: flyOut 1s forwards;
 }
@@ -166,20 +168,6 @@ h1 {
     letter-spacing: 15px;
 }
 
-/* .AboutMe{
-    position: absolute;
-    top:150px;
-    left:67%;
-    transform: translateX(100%);
-} */
-
-/* .show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-    filter:drop-shadow(1px 1px 7px black);
-} */
-
 
 .AboutMeInfo{
     width:40%;
@@ -199,7 +187,7 @@ h1 {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
-    filter:drop-shadow(3px 3px 7px black);
+    filter: drop-shadow(1px 1px 7px rgb(129, 129, 129));
 }
 
 .AboutMeImage{
@@ -217,30 +205,8 @@ h1 {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0%);
-    filter: drop-shadow(5px 5px 50px #222); 
+    filter: drop-shadow(5px 5px 50px rgb(131, 131, 131)); 
 }
-
-/* .Video {
-    height: 60vh;
-    margin-left: 13.1%;
-    display: flex;
-    float: left;
-    border-radius: 20px;
-    margin-top: 100px; 
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(100%);
-    transition: all 1s;
-    margin-bottom:25px;
-    cursor: pointer;
-}
-
-.showVideo{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
-    filter: drop-shadow(5px 5px 10px #222); 
-} */
 
 .Video:hover{
     opacity: 0;
@@ -272,7 +238,6 @@ h1 {
     margin-bottom:100px;
 }
 
-/*want to add delay for each point to appear*/
 .bluredTxt{
     opacity: 0;
     filter: blur(5px);
@@ -368,77 +333,19 @@ h1 {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0%);
-    filter: drop-shadow(5px 5px 50px #222); 
+    filter: drop-shadow(5px 5px 50px rgb(131, 131, 131)); 
 }
 
 .hamburger{
     display: none;
 }
 
-/* @media only screen and (max-width:320px){
-    .AboutMeImage{
-        opacity: 0;
-    }
-
-    .EducationImg{
-        opacity: 0;
-    }
-
-    .AboutMeInfo{
-        margin-left:5%;
-        width:90%;
-    }
-
-    .AboutMe{
-        position: absolute;
-        top:150px;
-        left: 39%;
-    }
-
-    .Name{
-        font-size: 1.5em;
-        letter-spacing: 5px;
-    }
-    .Video:hover{
-        opacity: 1;
-        transition: all 0.3s;
-    }
-    .UnderVidText{
-        display: none;
-    }
-
-    .showVideo{
-        opacity:0;
-    }
-    .Video{
-        opacity:1;
-        transform: translateY(0);
-        
-    }
-    
-} */
 
 .hButton{
     display: none;
 }
 
-/* .ContactSection{
-    width:49%;
-    height:100%;
-    display: inline-block;
-}
-
-.CVimg{
-    height:20%;
-    left:60%;
-    top:40%;
-    position:absolute;
-}
-
-.ContactBlock{
-    padding-left:15%;
-} */
-
+/* large screen media and css required for it */
 @media only screen and (min-width:1280px){
     .ContactSection{
         width:30%;
@@ -446,16 +353,14 @@ h1 {
         display: inline-block;
         margin-bottom: -10px;
     }
-
-    /* .hamburgerWrapper{
-        height: 0%;
-    } */
     
     .CVimg{
         height:50%;
         left:60%;
         top:27%;
         position:absolute;
+        filter:drop-shadow(1px 1px 20px rgb(131, 131, 131));
+        border-radius: 5px;
     }
     
     .ContactBlock{
@@ -473,14 +378,13 @@ h1 {
         opacity: 1;
         filter: blur(0);
         transform: translateX(0);
-        filter:drop-shadow(1px 1px 7px black);
+        filter: drop-shadow(1px 1px 7px rgb(129, 129, 129));
     }
 
     .Video {
         width:15%;
         float: left;
         margin-left:13.75%;
-        /* display: inline-block; */
         position: relative;
         border-radius: 20px;
         margin-top: 100px; 
@@ -510,7 +414,7 @@ h1 {
     }
     
 }
-
+/* phone screen media and css required for it */
 @media only screen and (min-width:360px) and (max-width:799px){ 
     .hamburgerstyle{
         display: flex;
@@ -574,22 +478,8 @@ h1 {
         position: absolute;
         z-index: 1;
         transition: all 1s;
-        /* display: none; */
         transform: translateX(100%);
-
-        /* scroll-snap-stop: always; */
     }
-/* 
-    .Unactive{
-        transform: translateX(100%);
-        transition: all 1s;
-    }
-
-    .Active{
-        transition: all 1s;
-
-        transform: translateX(0%);
-    } */
 
     .link{
         display: none;
@@ -609,6 +499,9 @@ h1 {
         margin-top:45px;
         margin-left:27.5%;
         position:relative;
+        margin-bottom:10%;
+        filter:drop-shadow(1px 1px 10px rgb(131, 131, 131));
+        border-radius: 5px;
     }
     
 
@@ -690,8 +583,20 @@ h1 {
         justify-content: center;
         align-items: center;
     }
+
+    .show{
+        filter: drop-shadow(1px 1px 7px rgb(129, 129, 129));
+    }
+    .show2{
+        filter: drop-shadow(1px 1px 7px rgb(129, 129, 129));
+    }
+    h1{
+        filter: drop-shadow(1px 1px 7px rgb(129, 129, 129));
+    }
+
 }
 
+/* ipad screen media and css required for it */
 @media only screen and (min-width:800px) and (max-width:1279px){ 
     .ContactSection{
         width:35%;
@@ -706,12 +611,12 @@ h1 {
         float: left;
         top: 25%;
         left: 55%;
-        /* z-index: 100; */
+        filter:drop-shadow(1px 1px 20px rgb(131, 131, 131));
+        border-radius: 5px;
     }
     
     .ContactBlock{
         padding-left:15%;
-        /* margin-top: -40%; */
     }
 
     .email{
@@ -739,13 +644,9 @@ h1 {
     }
 
     .AboutMe{
-        /* position: absolute;
-        top:30%;
-        left: 37%; */
         display: flex;
         justify-content: center;
         align-items: center;
-        /* margin-left: auto; */
     }
 
     .Video:hover{
